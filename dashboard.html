@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Selamat Datang di AA Corp</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url(img/gerak.gif);
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        .container {
+            width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.8);
+            color: #ffffff;
+            position: relative;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 36px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background-color: yellow;
+            color: #000000;
+            font-weight: bold;
+        }
+
+        .pagination {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .pagination a {
+            display: inline-block;
+            padding: 5px 10px;
+            background-color: #ffffff;
+            color: #000000;
+            text-decoration: none;
+            margin-right: 5px;
+            border-radius: 5px;
+        }
+
+        .pagination a.active {
+            background-color: #000000;
+            color: #ffffff;
+        }
+
+        .logo {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            font-size: 24px;
+            font-weight: bold;
+            color: #ffffff;
+        }
+
+        .logout {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-weight: bold;
+            color: #ffffff;
+            border: 2px solid red;
+            padding: 5px 10px;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+    </style>
+    <script>
+        window.addEventListener('DOMContentLoaded', function () {
+            showPage(1);
+        });
+
+        function showPage(page) {
+            var itemsPerPage = 10;
+            var start = (page - 1) * itemsPerPage;
+            var end = start + itemsPerPage;
+
+            var tableRows = Array.from(document.querySelectorAll('.table-row'));
+            tableRows.forEach(function (row, index) {
+                if (index >= start && index < end) {
+                    row.style.display = 'table-row';
+                } else {
+                    row.style.display = 'none';
+                }
+            });
+
+            var paginationLinks = Array.from(document.querySelectorAll('.pagination a'));
+            paginationLinks.forEach(function (link) {
+                link.classList.remove('active');
+            });
+            paginationLinks[page - 1].classList.add('active');
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>Selamat Datang di AA Corp</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Nomor</th>
+                    <th>Judul konten</th>
+                    <th>Link</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="table-row">
+                    <td>1</td>
+                    <td>Program Pembelajaran Kumon</td>
+                    <td><a href="https://drive.google.com/drive/folders/10yGidbMzlPhTEeMFV9YddR6mwotEqxiF?usp=sharing">LINK</a></td>
+                </tr>
+                <tr class="table-row">
+                    <td>2</td>
+                    <td>Tiktok Konten Master</td>
+                    <td><a href="https://drive.google.com/drive/folders/13aFrcL3myFwgoyMBnhPgX6_m_zcGIO1M?usp=sharing">LINK</a></td>
+                </tr>
+                <tr class="table-row">
+                    <td>3</td>
+                    <td>Bundling belajar pemograman</td>
+                    <td><a href="https://drive.google.com/drive/folders/19-P_12die4_qjiuMh2kkbylgYnEPFbwK?usp=sharing">LINK</a></td>
+                </tr>
+                <tr class="table-row">
+                    <td>4</td>
+                    <td>Kelas Hack Youtube</td>
+                    <td><a href="https://drive.google.com/drive/folders/1GUkCm30tUNM3YX1nlB-JIKDX6DUriEvz?usp=sharing">LINK</a></td>
+                </tr>
+                <tr class="table-row">
+                    <td>5</td>
+                    <td>Pasti cuan dari bisnis online</td>
+                    <td><a href="https://drive.google.com/drive/folders/1UKFD2LwqPM3aZFhOtFvvm9pJT5grWOnk?usp=sharing">LINK</a></td>
+                </tr>
+                <tr class="table-row">
+                    <td>6</td>
+                    <td>The Official Guide Toufle IBT Test</td>
+                    <td><a href="https://drive.google.com/drive/folders/1F39SaGcLcPInm5kxHNHkf-MI7m5k3Obf?usp=sharing">LINK</a></td>
+                </tr>
+                <tr class="table-row">
+                    <td>7</td>
+                    <td>Belajar Youtube Cepat 4000 Jam tayang dan 1000 Subsriber</td>
+                    <td><a href="https://drive.google.com/drive/folders/1OhysOO1Zhd8sfA-nlgSnSgHy5D_Y1DGl?usp=sharing">LINK</a></td>
+                </tr>
+                <tr class="table-row">
+                    <td>8</td>
+                    <td>Kalender konten V3 +++ BONUS ( 3 Tahun)</td>
+                    <td><a href="https://drive.google.com/drive/folders/1WNTl3MDnvQuu4vesEkIDoUCONhHI0NpY?usp=sharing">LINK</a></td>
+                </tr>
+                <tr class="table-row">
+                    <td>9</td>
+                    <td>Preset Adobe Lightroom</td>
+                    <td><a href="https://drive.google.com/drive/folders/1L7wRMklhq1ZXZJLgWr8O10hfJHE4mPtu?usp=sharing">LINK</a></td>
+                </tr>
+                <tr class="table-row">
+                    <td>10</td>
+                    <td>[PREMIUM] 17 TEMPLATE LAPORAN KEUANGAN EXCEL</td>
+                    <td><a href="https://drive.google.com/drive/folders/1uFGpqk5v4PlDZPx9bCyhLI70Sm7QJfr_?usp=sharing">LINK</a></td>
+                </tr>
+                <tr class="table-row">
+                    <td>11</td>
+                    <td>99999 Kumpulan video siap upload</td>
+                    <td><a href="https://drive.google.com/drive/folders/1zw8luIHa0lkmxm1Pb9LBvEeEIHD1pocr?usp=sharing">LINK</a></td>
+                </tr>
+                <tr class="table-row">
+                    <td>12</td>
+                    <td>Bundling Ebook Premium Lengkap</td>
+                    <td><a href="https://drive.google.com/drive/folders/1kQ60hqlGE5jNSV4aGVzpmmTI4V4FcV59?usp=sharing">LINK</a></td>
+                </tr>
+                <tr class="table-row">
+                    <td>13</td>
+                    <td>LUTS Adobe Premier Pro</td>
+                    <td><a href="https://drive.google.com/drive/folders/1O1IFxwT66DAFyeiYdJ32KITlWIiC8q2G?usp=sharing">LINK</a></td>
+                </tr>
+                <tr class="table-row">
+                    <td>14</td>
+                    <td>GOOGLE DATA STUDIO ANALYSIS</td>
+                    <td><a href="https://drive.google.com/drive/folders/18M3DFxrORKQorYpiCDquNC9z5NK7PP0b?usp=sharing">LINK</a></td>
+                </tr>
+                <tr class="table-row">
+                    <td>15</td>
+                    <td>MAHIR DATA SCIENCE 5in1 CODINGSTUDIO</td>
+                    <td><a href="https://drive.google.com/drive/folders/1ZNODNCEwBlEDskMQb0_M7W-JkaVWZGfW?usp=sharing">LINK</a></td>
+                </tr>
+                <tr class="table-row">
+                    <td>16</td>
+                    <td>MASTERING WEBSITE</td>
+                    <td><a href="https://drive.google.com/drive/folders/1J4PSWeYaeKfNMYqo1V77uiAfiNeYON3Z?usp=sharing">LINK</a></td>
+                </tr>
+                <tr class="table-row">
+                    <td>17</td>
+                    <td>ADSENSE UNIVERSE</td>
+                    <td><a href="https://drive.google.com/drive/folders/16AHmi-tGW6DYwTGFJFUrH7CsBOGcO0NZ?usp=sharing">LINK</a></td>
+                </tr>
+                <tr class="table-row">
+                    <td>18</td>
+                    <td>Ebook profit Maker</td>
+                    <td><a href="https://drive.google.com/file/d/19G0E2yumrZCY5904913j0A4Xm5MdmQxK/view?usp=sharing">LINK</a></td>
+                </tr>
+                <tr class="table-row">
+                    <td>19</td>
+                    <td>Crypto Cash Machine - Sarjana Crypto</td>
+                    <td><a href="https://drive.google.com/file/d/1Puti3nmrBk2dX8wSWMdh5v_B9ZNRP-jY/view?usp=sharing">LINK</a></td>
+                </tr>
+                <tr class="table-row">
+                    <td>20</td>
+                    <td>Hipnogasm</td>
+                    <td><a href="https://drive.google.com/drive/folders/1Qvr7kNjkf_DDlq9i9JahBgOYgBE6kj_b?usp=sharing">LINK</a></td>
+                </tr>
+                <tr class="table-row">
+                    <td>21</td>
+                    <td>Romy Rafael Hypnotherapy</td>
+                    <td><a href="https://drive.google.com/drive/folders/1UC37hjdNzvqvu1KDBaJ1tgYJOe6O-QPx?usp=sharing">LINK</a></td>
+                </tr>
+                <tr class="table-row">
+                    <td>22</td>
+                    <td>Materi Database Supplier</td>
+                    <td><a href="https://drive.google.com/drive/folders/1_l6vjAMKS5yieRL4zdU4wlBjtmuI7TG8?usp=sharing">LINK</a></td>
+                </tr>
+                <tr class="table-row">
+                    <td>23</td>
+                    <td>MeVidio</td>
+                    <td><a href="https://drive.google.com/drive/folders/1gPIn1E0I4wraH1ICggkcAuiuxJ88zlP6?usp=sharing">LINK</a></td>
+                </tr>
+                <tr class="table-row">
+                    <td>24</td>
+                    <td>125 Contekan Iklan</td>
+                    <td><a href="https://drive.google.com/file/d/1hiFL2w8zxKgnW1R7b68FrG_ATpEKlPQ2/view?usp=sharing">LINK</a></td>
+                </tr>
+                <tr class="table-row">
+                    <td>25</td>
+                    <td>30 hari Jago jualan</td>
+                    <td><a href="https://drive.google.com/file/d/1qAmS3Pqaa8Gj2K_jYNTCOX1ILDFN-Se2/view?usp=sharing">LINK</a></td>
+                </tr>
+                <tr class="table-row">
+                    <td>26</td>
+                    <td>Easy Blogging</td>
+                    <td><a href="https://drive.google.com/drive/folders/1t5AOJV5BLABYGvn76SlKIxh696XdFpf4?usp=sharing">LINK</a></td>
+                </tr>
+                <tr class="table-row">
+                    <td>27</td>
+                    <td>Creator Mastery - Academy</td>
+                    <td><a href="https://drive.google.com/drive/folders/1x_F5JSujTewNbnj-hpU8E4trW6H-iJwT?usp=sharing">LINK</a></td>
+                </tr>
+                <tr class="table-row">
+                    <td>28</td>
+                    <td>Fake Order Mastery</td>
+                    <td><a href="https://drive.google.com/drive/folders/1zhD73LFaEDDnj_ChHk6mcd_J7a6OO8fG?usp=sharing">LINK</a></td>
+                </tr>
+                <tr class="table-row">
+                    <td>29</td>
+                    <td>Tiktok Ads Masterclass</td>
+                    <td><a href="https://drive.google.com/drive/folders/1F6TcHr0f5XiayjYtzSc4fJ4T8H0M5-3X?usp=sharing">LINK</a></td>
+                </tr>
+                <tr class="table-row">
+                    <td>30</td>
+                    <td>Dibimbing Bisnis dari 0</td>
+                    <td><a href="https://drive.google.com/drive/folders/1mrAaFUeRNn76zM_Wbphlz0Y10c2fE2__?usp=sharing">LINK</a></td>
+                </tr>
+                <tr class="table-row">
+                    <td>31</td>
+                    <td>Kelas Freelance</td>
+                    <td><a href="https://drive.google.com/drive/folders/1dX6JXJJOdnkyieWvNQjW8c4Be3Es1kZq?usp=sharing">LINK</a></td>
+                </tr>
+                <tr class="table-row">
+                    <td>32</td>
+                    <td>The New Vision 2030 - Mardigu Wowiek</td>
+                    <td><a href="https://drive.google.com/drive/folders/14sKQzmr96BJnBuNKyOo9VcU2-FFkWa8D?usp=sharing">LINK</a></td>
+                </tr>
+  		 <tr class="table-row">
+                    <td>33</td>
+                    <td>LAKU KERASIN - DEWA EKA PRAYOGA</td>
+                    <td><a href="https://drive.google.com/drive/folders/1DewJN1vIkcFh5KLz0Pbk_F5lZOAl2dN6?usp=sharing">LINK</a></td>
+                </tr>
+  		 <tr class="table-row">
+                    <td>34</td>
+                    <td>Ecourse Ternak Uang</td>
+                    <td><a href="https://drive.google.com/drive/folders/1xbEei5QKNLnsM6zofGhTq4UlxpJMY0If?usp=sharing">LINK</a></td>
+                </tr>
+		 <tr class="table-row">
+                    <td>35</td>
+                    <td>Undangan Digital PPT</td>
+                    <td><a href="https://drive.google.com/drive/folders/1hmABc25HPOTx_GZGMG040iVDQer77zuc?usp=sharing">LINK</a></td>
+                </tr>
+		 <tr class="table-row">
+                    <td>36</td>
+                    <td>Baleomol Reseller Jitu</td>
+                    <td><a href="https://drive.google.com/file/d/1_cYh-sKWi8hILUP6u6mtufTsp4DZ4DLu/view?usp=sharing">LINK</a></td>
+                </tr>
+		 <tr class="table-row">
+                    <td>37</td>
+                    <td>2000++ IG FEEDS & TEMPLATES</td>
+                    <td><a href="https://drive.google.com/drive/folders/1zBNn9N_8k_NEQv-9r7HEDmxACnoYdbU3?usp=sharing">LINK</a></td>
+                </tr>
+
+
+            </tbody>
+        </table>
+        <div class="pagination">
+            <a href="#" onclick="showPage(1)">1</a>
+            <a href="#" onclick="showPage(2)">2</a>
+            <a href="#" onclick="showPage(3)">3</a>
+            <a href="#" onclick="showPage(4)">4</a>
+        </div>
+        <a href="Index.html" class="logout">Logout</a>
+        <div class="logo">
+            <img src="img/AA.png" alt="Logo" width="50px" height="50px">
+        </div>
+    </div>
+</body>
+</html>

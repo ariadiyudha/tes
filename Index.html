@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login Page</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.min.css">
+</head>
+<body>
+    <h1>Welcome to AA Corp</h1>
+    <div id="sambutan">
+        Selamat datang di konten premium, sekali beli bisa akses konten premium sepuasmu
+    </div>
+    <form onsubmit="validateForm(event)">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required><br>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required><br>
+
+        <input type="submit" value="Login">
+    </form>
+    <div id="createAccount">
+        <a href="#" onclick="showPopup('Beli product kami di www._____.com')">Want to create an account?</a>
+    </div>
+    <div id="lupaPassword">
+        <a href="#" onclick="showPopup('Hubungi admin pada nomor ______________')">Lupa Password atau Ada kendala?</a>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.min.js"></script>
+    <script>
+        function showPopup(message, type) {
+            Swal.fire({
+                title: type === 'success' ? 'Success' : 'Error',
+                text: message,
+                icon: type,
+                confirmButtonText: 'OK',
+                customClass: {
+                    container: 'custom-swal-container',
+                    popup: 'custom-swal-popup',
+                    title: 'custom-swal-title',
+                    confirmButton: 'custom-swal-confirm-button'
+                }
+            }).then((result) => {
+                if (result.isConfirmed && type === 'success') {
+                    window.location.href = 'dashboard.html';
+                }
+            });
+        }
+
+        function validateForm(event) {
+            event.preventDefault();
+
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            if (username === 'ariadi' && password === 'yudha') {
+                showPopup('BERHASIL, SILAHKAN MASUK BOSKU', 'success');
+            } else {
+                showPopup('Salah ya bos? Silahkan periksa kembali huruf & angkanya', 'error');
+            }
+        }
+    </script>
+
+    <div id="copyRight">
+        &copy; Copy right by AA corp
+    </div>
+</body>
+</html>

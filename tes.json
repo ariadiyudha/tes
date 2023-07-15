@@ -1,0 +1,13 @@
+{
+  "welcomeMessage": "Welcome to AA Corp",
+  "greeting": "Selamat datang di konten premium, sekali beli bisa akses konten premium sepuasmu",
+  "createAccountMessage": "Want to create an account?",
+  "createAccountLink": "www._____.com",
+  "forgotPasswordMessage": "Lupa Password atau Ada kendala?",
+  "adminContact": "Hubungi admin pada nomor ______________",
+  "successPopupTitle": "Success",
+  "errorPopupTitle": "Error",
+  "successPopupText": "BERHASIL, SILAHKAN MASUK BOSKU",
+  "errorPopupText": "Salah ya bos? Silahkan periksa kembali huruf & angkanya",
+  "copyRightText": "&copy; Copy right by AA corp"
+}
